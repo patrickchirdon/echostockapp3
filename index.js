@@ -43,7 +43,7 @@ router.get('/health', (req, res) => {
 });
 
 var server = app.listen(app.get('port'), function() {
-  debug('Express server listening on port ' + server.address().port);
+ console.log('hello')
 });
 server.timeout = 1000;
                                 
