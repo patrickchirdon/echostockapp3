@@ -29,7 +29,18 @@ var authToken = "d9b8068bc7b60c3242da8a4dffe6974b"  // Your Auth Token from www.
 
 const client = require('twilio')(accountSid, authToken);
 
+const router = express.Router();
 
+router.get('/health', (req, res) => {
+  const data = {
+    uptime: process.uptime(),
+    message: 'Ok',
+    date: new Date()
+  }
+
+
+  res.status(200).send(data);
+});
 
 
                                 
