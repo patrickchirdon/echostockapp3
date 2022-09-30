@@ -42,7 +42,10 @@ router.get('/health', (req, res) => {
   res.status(200).send(data);
 });
 
-
+var server = app.listen(app.get('port'), function() {
+  debug('Express server listening on port ' + server.address().port);
+});
+server.timeout = 1000;
                                 
                                  
 
